@@ -8,7 +8,7 @@
     "useDefineForClassFields": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "exactOptionalPropertyTypes": true,
@@ -21,7 +21,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "tailwind.config.ts", "postcss.config.cjs"],
   "references": [
     {
       "path": "./tsconfig.vite.json",

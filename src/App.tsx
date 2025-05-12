@@ -1,13 +1,24 @@
-import styles from './App.module.css';
+import { useState } from 'react';
+import Slide from './components/Slide';
+import { slides } from './data/data';
+import TabBar from './components/TabBar';
 
-export function App() {
+export default function App() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleTabSelect = (index: number) => {
+    setCurrentIndex(index);
+  };
+
   return (
-    <>
-      <header>
-        <h1>HubX Frontend Assignment</h1>
-      </header>
+    <div className="w-full h-screen flex justify-center ">
+      <div className="w-[1440px] h-[1169px] bg-[#FAFAFB] flex flex-col">
+        {/* Slide content: 539px tall */}
+        <Slide {...slides[currentIndex]} />
 
-      <main className={styles.main}></main>
-    </>
+        {/* Tab bar: 124px tall */}
+        <TabBar activeIndex={currentIndex} onSelect={handleTabSelect} />
+      </div>
+    </div>
   );
 }
