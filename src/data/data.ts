@@ -10,37 +10,37 @@ export const slides = [
     label: 'Document Scanner',
     title: 'Scan with Ease',
     subtitle:
-      'Scan any document instantly with your mobile device by just a few steps. Save as PDF, JPG, ZIP, TXT and Word format.',
+      'Scan any document instantly with your mobile device by just a few steps. Save as PDF,JPG,ZIP,TXT and Word format.',
   },
   {
     image: signAndStamp,
     label: 'Sign & Stamp',
-    title: 'Sign Effortlessly',
+    title: 'One-Tap Focus',
     subtitle:
-      'Easily add signatures and stamps to your scanned documents. Drag, place, and export — all from your phone.',
+      'Draw, scan or import your signature and stamp with a simple touch. Sign and stamp any document with just a single tap!',
   },
   {
     image: batchScanning,
     label: 'Batch Scanning',
-    title: 'Scan in Batches',
+    title: 'Multiple Page Scan',
     subtitle:
-      'Scan multiple documents at once and merge them into a single file. Perfect for reports, contracts, and more.',
+      'Scan multiple pages or documents in multiple-scanning mode. Batch all scans as a single document.',
   },
   {
     image: advancedFilters,
 
     label: 'Advanced Filters',
-    title: 'Clean Up Automatically',
+    title: 'Unique Filters',
     subtitle:
-      'Apply smart filters to remove shadows and straighten pages. Enhance readability with one tap.',
+      'Apply advanced filters and enhance quality with various custom made filters. Manually edit brightness and contrast by your own choice on the custom filters.',
   },
   {
     image: exportAndShare,
 
     label: 'Export & Share',
-    title: 'Share Instantly',
+    title: 'All-Round Conversation',
     subtitle:
-      'Save your scans in multiple formats. Send via email, cloud, or messaging apps with ease.',
+      'Export your scans as PDF,JPG,ZIP,TXT and Word.',
   },
 ];
 
