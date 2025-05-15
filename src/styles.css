@@ -31,3 +31,13 @@ body {
   font-weight: 800;
   font-style: italic;
 }
+
+@media (max-width: 812px) {
+  .max-812\\:flex-col {
+    flex-direction: column !important;
+  }
+}
+
+
+
+

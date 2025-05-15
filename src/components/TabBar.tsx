@@ -41,7 +41,6 @@ const tabs = [
     iconActive: exportIconBlue,
   },
 ];
-
 export default function TabBar({
   activeIndex,
   onSelect,
@@ -50,28 +49,38 @@ export default function TabBar({
   onSelect: (index: number) => void;
 }) {
   return (
-    <div className="w-[1440px] h-[124px] bg-white flex mx-auto">
-      {tabs.map((tab, index) => (
-        <button
-          key={index}
-          onClick={() => onSelect(index)}
-          className={`h-[124px] flex flex-row items-center justify-center gap-[16px] border-x-[1px] border-solid border-[#00000014] ${
-            activeIndex === index ? 'bg-[#0381FF08]' : 'bg-white'
-          }`}
-          style={{ width: `${tab.width}px` }}
-        >
-          <img
-            src={activeIndex === index ? tab.iconActive : tab.iconGray}
-            className="w-[56px] h-[56px]"
-            alt={tab.label}
-          />
-          <div className="h-[28px] flex items-center justify-center w-fit">
-            <span className="text-[20px] leading-[28px] font-medium whitespace-nowrap">
+    <div className="w-full max-w-[1440px] h-[124px] bg-white flex overflow-x-auto md:overflow-visible">
+      {tabs.map((tab, index) => {
+        const isFirst = index === 0;
+        const isLast = index === tabs.length - 1;
+
+        return (
+          <button
+            key={index}
+            onClick={() => onSelect(index)}
+            className={`h-full flex items-center justify-center gap-4 flex-shrink-0 ${
+              !isFirst ? 'border-l border-[#00000014]' : ''
+            } ${activeIndex === index ? 'bg-[#0381FF08]' : 'bg-white'} ${
+              isLast ? 'border-r-0' : ''
+            }`}
+            style={{
+                width: `${tab.width}px`,
+                padding: 0,
+                margin: 0,
+                borderRight: isLast ? '1px solid transparent' : 'none',
+              }}
+          >
+            <img
+              src={activeIndex === index ? tab.iconActive : tab.iconGray}
+              className="w-[56px] h-[56px]"
+              alt={tab.label}
+            />
+            <span className="text-[16px] md:text-[20px] leading-[28px] font-medium whitespace-nowrap">
               {tab.label}
             </span>
-          </div>
-        </button>
-      ))}
+          </button>
+        );
+      })}
     </div>
   );
 }

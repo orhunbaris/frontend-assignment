@@ -11,13 +11,15 @@ export default function App() {
   };
 
   return (
-    <div className="w-full h-screen flex justify-center ">
-      <div className="w-[1440px] h-[1169px] bg-[#FAFAFB] flex flex-col">
-        {/* Slide content: 539px tall */}
-        <Slide {...slides[currentIndex]} />
-
-        {/* Tab bar: 124px tall */}
-        <TabBar activeIndex={currentIndex} onSelect={handleTabSelect} />
+    <div className="w-full min-h-screen bg-[#FAFAFB] flex justify-center">
+      <div className="w-full max-w-[1440px] flex flex-col relative">
+        
+        {/* Content Wrapper with vertical alignment */}
+        <div className="w-full flex flex-col mt-[56px] mb-[64px] md:mt-[233px] md:mb-[199px]">
+          <Slide {...slides[currentIndex]} />
+          <TabBar activeIndex={currentIndex} onSelect={handleTabSelect} />
+        </div>
+        
       </div>
     </div>
   );
