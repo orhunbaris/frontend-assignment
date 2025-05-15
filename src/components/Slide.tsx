@@ -32,19 +32,11 @@ export default function Slide({ image, label, title, subtitle }: SlideProps) {
       <div className="relative overflow-hidden h-[560px] xl:mt-[53px] xl:ml-[68px] w-full max-w-[384px] xl:w-[610px] xl:max-w-none flex-shrink-0">
         {/* Phone image animates upward inside mask */}
         <motion.div
-          initial={{ y: 560 }}
-          animate={{ y: 0 }}
-          transition={{
-            duration: 1.0, // slower, more elegant glide
-            ease: 'easeInOut', // smooth classy motion
-          }}
-          className="w-full h-full"
+          initial={currentVariant.image.initial}
+          animate={currentVariant.image.animate}
+          transition={currentVariant.image.transition}
         >
-          <img
-            src={image}
-            alt={title}
-            className="w-full h-full object-contain"
-          />
+          <img src={image} alt={title} />
         </motion.div>
       </div>
 
