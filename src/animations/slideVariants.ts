@@ -4,6 +4,8 @@ import rightStampIcon from '../assets/icons/right-stamp-icon.png';
 import file1 from '../assets/icons/file-1.png';
 import file2 from '../assets/icons/file-2.png';
 import file3 from '../assets/icons/file-3.png';
+import leftFilterBar from '../assets/icons/left-filter-bar.png';
+import rightFilterBar from '../assets/icons/right-filter-bar.png';
 
 const defaultPhoneImageAnimation = {
   initial: { y: 560 },
@@ -100,10 +102,27 @@ export const slideVariants: Record<string, SlideVariant> = {
   }
   
 ,  
-  advancedFilters: {
+advancedFilters: {
     image: defaultPhoneImageAnimation,
     text: defaultTextAnimation,
-  },
+    decorations: [
+      {
+        src: leftFilterBar,
+        initial: { opacity: 0, scale: 0 },
+        animate: { opacity: 1, scale: 1 },
+        transition: { duration: 0.4, delay: 1.0, ease: 'easeOut' },
+        className: 'absolute top-[186px] left-[103.28px] w-[43px] z-10',
+      },
+      {
+        src: rightFilterBar,
+        initial: { opacity: 0, scale: 0 },
+        animate: { opacity: 1, scale: 1 },
+        transition: { duration: 0.4, delay: 1.2, ease: 'easeOut' },
+        className: 'absolute top-[186px] right-[86.12px] w-[43px] z-10',
+      },
+    ],
+  }
+,  
   exportAndShare: {
     image: defaultPhoneImageAnimation,
     text: defaultTextAnimation,
