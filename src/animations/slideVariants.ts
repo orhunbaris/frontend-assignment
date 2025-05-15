@@ -1,6 +1,9 @@
 import { TargetAndTransition, Transition } from 'framer-motion';
 import leftStampIcon from '../assets/icons/left-stamp-icon.png';
 import rightStampIcon from '../assets/icons/right-stamp-icon.png';
+import file1 from '../assets/icons/file-1.png';
+import file2 from '../assets/icons/file-2.png';
+import file3 from '../assets/icons/file-3.png';
 
 const defaultPhoneImageAnimation = {
   initial: { y: 560 },
@@ -71,7 +74,32 @@ export const slideVariants: Record<string, SlideVariant> = {
   batchScanning: {
     image: defaultPhoneImageAnimation,
     text: defaultTextAnimation,
-  },
+    decorations: [
+      {
+        src: file1,
+        initial: { opacity: 0, y: 200, scale: 0.95 },
+        animate: { opacity: 1, y: 0, scale: 0.95 },
+        transition: { duration: 0.5, delay: 0.5, ease: 'easeOut' },
+        className: 'absolute top-[200px] left-[171px] w-[270px] h-[360px] object-cover z-10',
+      },
+      {
+        src: file2,
+        initial: { opacity: 0, y: 200, scale: 0.95 },
+        animate: { opacity: 1, y: 0, scale: 1.0 },
+        transition: { duration: 0.5, delay: 0.7, ease: 'easeOut' },
+        className: 'absolute top-[214px] left-[171px] w-[270px] h-[360px] object-cover z-20',
+      },
+      {
+        src: file3,
+        initial: { opacity: 0, y: 200, scale: 0.95 },
+        animate: { opacity: 1, y: 0, scale: 1.05 },
+        transition: { duration: 0.5, delay: 0.9, ease: 'easeOut' },
+        className: 'absolute top-[228px] left-[171px] w-[270px] h-[360px] object-cover z-30',
+      },
+    ],
+  }
+  
+,  
   advancedFilters: {
     image: defaultPhoneImageAnimation,
     text: defaultTextAnimation,
