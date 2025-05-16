@@ -6,6 +6,10 @@ import file2 from '../assets/icons/file-2.png';
 import file3 from '../assets/icons/file-3.png';
 import leftFilterBar from '../assets/icons/left-filter-bar.png';
 import rightFilterBar from '../assets/icons/right-filter-bar.png';
+import arrowIcon from '../assets/icons/arrow-icon.png';
+import pdfIcon from '../assets/icons/pdf-icon.png';
+import jpgIcon from '../assets/icons/jpg-icon.png';
+import txtIcon from '../assets/icons/txt-icon.png';
 
 const defaultPhoneImageAnimation = {
   initial: { y: 560 },
@@ -123,8 +127,39 @@ advancedFilters: {
     ],
   }
 ,  
-  exportAndShare: {
+exportAndShare: {
     image: defaultPhoneImageAnimation,
     text: defaultTextAnimation,
-  },
+    decorations: [
+      {
+        src: arrowIcon,
+        initial: { opacity: 0, x: -100 },
+        animate: { opacity: 1, x: 0 },
+        transition: { duration: 0.4, delay: 0.8, ease: 'easeOut' },
+        className: 'absolute [bottom:36.17px] [left:90px] w-[42.83px] h-[41.25px] object-contain z-10',
+      },
+      {
+        src: pdfIcon,
+        initial: { opacity: 0, x: -100 },
+        animate: { opacity: 1, x: 0 },
+        transition: { duration: 0.4, delay: 1.0, ease: 'easeOut' },
+        className: 'absolute [bottom:27.93px] [left:104.68px] w-[131.9px] h-[163.98px] object-contain z-20',
+      },
+      {
+        src: jpgIcon,
+        initial: { opacity: 0, x: -100 },
+        animate: { opacity: 1, x: 0 },
+        transition: { duration: 0.4, delay: 1.2, ease: 'easeOut' },
+        className: 'absolute [bottom:72.51px] [left:257.47px] w-[110px] h-[132.49px] object-contain z-30',
+      },
+      {
+        src: txtIcon,
+        initial: { opacity: 0, x: -100 },
+        animate: { opacity: 1, x: 0 },
+        transition: { duration: 0.4, delay: 1.4, ease: 'easeOut' },
+        className: 'absolute [bottom:24.52px] [right:83.79px] w-[136.97px] h-[167.31px] object-contain z-40',
+      },
+    ],
+  }
+  
 };
