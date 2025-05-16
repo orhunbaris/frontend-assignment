@@ -37,7 +37,16 @@ body {
     flex-direction: column !important;
   }
 }
+@keyframes drawCircle {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 
-
+@keyframes popFill {
+  to {
+    transform: scale(1);
+  }
+}
 
 
