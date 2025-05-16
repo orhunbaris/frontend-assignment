@@ -69,7 +69,7 @@ export const slideVariants: Record<string, SlideVariant> = {
         className: `
           absolute
           w-[142.18px] h-[93.63px]
-          bottom-[22cle.34%] left-[2.84%]
+          bottom-[22.34%] left-[2.84%]
           md:w-[217px] md:h-auto 
           md:top-[327.26px] md:left-[34px]
           z-10`,
