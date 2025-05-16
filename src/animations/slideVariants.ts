@@ -62,18 +62,30 @@ export const slideVariants: Record<string, SlideVariant> = {
     text: defaultTextAnimation,
     decorations: [
       {
+        src: leftStampIcon,
+        initial: { opacity: 0, scale: 0 },
+        animate: { opacity: 1, scale: 1 },
+        transition: { duration: 0.5, delay: 0.8, ease: 'easeOut' },
+        className: `
+          absolute
+          w-[142.18px] h-[93.63px]
+          bottom-[22cle.34%] left-[2.84%]
+          md:w-[217px] md:h-auto 
+          md:top-[327.26px] md:left-[34px]
+          z-10`,
+      },
+      {
         src: rightStampIcon,
         initial: { opacity: 0, scale: 0 },
         animate: { opacity: 1, scale: 1 },
         transition: { duration: 0.5, delay: 1.1, ease: 'easeOut' },
-        className: 'absolute top-[218.06px] right-[26.18px] w-[216px] z-10',
-      },
-      {
-        src: leftStampIcon,
-        initial: { opacity: 0, scale: 0 },
-        animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.5, delay: 0.8, ease: 'easeOut' },   
-        className: 'absolute top-[327.26px] left-[34px] w-[217px] z-10',
+        className: `
+          absolute
+          w-[141.69px] h-[118.26px]
+          bottom-[36.11%] right-[1.88%]
+          md:w-[216px] md:h-auto 
+          md:top-[218.06px] md:right-[26.18px]
+          z-10`,
       },
     ],
   },
@@ -86,27 +98,29 @@ export const slideVariants: Record<string, SlideVariant> = {
         initial: { opacity: 0, y: 200, scale: 0.95 },
         animate: { opacity: 1, y: 0, scale: 0.95 },
         transition: { duration: 0.5, delay: 0.5, ease: 'easeOut' },
-        className: 'absolute top-[200px] left-[171px] w-[270px] h-[360px] object-cover z-10',
+        className:
+          'absolute top-[200px] left-[171px] w-[270px] h-[360px] object-cover z-10',
       },
       {
         src: file2,
         initial: { opacity: 0, y: 200, scale: 0.95 },
         animate: { opacity: 1, y: 0, scale: 1.0 },
         transition: { duration: 0.5, delay: 0.7, ease: 'easeOut' },
-        className: 'absolute top-[214px] left-[171px] w-[270px] h-[360px] object-cover z-20',
+        className:
+          'absolute top-[214px] left-[171px] w-[270px] h-[360px] object-cover z-20',
       },
       {
         src: file3,
         initial: { opacity: 0, y: 200, scale: 0.95 },
         animate: { opacity: 1, y: 0, scale: 1.05 },
         transition: { duration: 0.5, delay: 0.9, ease: 'easeOut' },
-        className: 'absolute top-[228px] left-[171px] w-[270px] h-[360px] object-cover z-30',
+        className:
+          'absolute top-[228px] left-[171px] w-[270px] h-[360px] object-cover z-30',
       },
     ],
-  }
-  
-,  
-advancedFilters: {
+  },
+
+  advancedFilters: {
     image: defaultPhoneImageAnimation,
     text: defaultTextAnimation,
     decorations: [
@@ -125,9 +139,8 @@ advancedFilters: {
         className: 'absolute top-[186px] right-[86.12px] w-[43px] z-10',
       },
     ],
-  }
-,  
-exportAndShare: {
+  },
+  exportAndShare: {
     image: defaultPhoneImageAnimation,
     text: defaultTextAnimation,
     decorations: [
@@ -136,30 +149,33 @@ exportAndShare: {
         initial: { opacity: 0, x: -100 },
         animate: { opacity: 1, x: 0 },
         transition: { duration: 0.4, delay: 0.8, ease: 'easeOut' },
-        className: 'absolute [bottom:36.17px] [left:90px] w-[42.83px] h-[41.25px] object-contain z-10',
+        className:
+          'absolute [bottom:36.17px] [left:90px] w-[42.83px] h-[41.25px] object-contain z-10',
       },
       {
         src: pdfIcon,
         initial: { opacity: 0, x: -100 },
         animate: { opacity: 1, x: 0 },
         transition: { duration: 0.4, delay: 1.0, ease: 'easeOut' },
-        className: 'absolute [bottom:27.93px] [left:104.68px] w-[131.9px] h-[163.98px] object-contain z-20',
+        className:
+          'absolute [bottom:27.93px] [left:104.68px] w-[131.9px] h-[163.98px] object-contain z-20',
       },
       {
         src: jpgIcon,
         initial: { opacity: 0, x: -100 },
         animate: { opacity: 1, x: 0 },
         transition: { duration: 0.4, delay: 1.2, ease: 'easeOut' },
-        className: 'absolute [bottom:72.51px] [left:257.47px] w-[110px] h-[132.49px] object-contain z-30',
+        className:
+          'absolute [bottom:72.51px] [left:257.47px] w-[110px] h-[132.49px] object-contain z-30',
       },
       {
         src: txtIcon,
         initial: { opacity: 0, x: -100 },
         animate: { opacity: 1, x: 0 },
         transition: { duration: 0.4, delay: 1.4, ease: 'easeOut' },
-        className: 'absolute [bottom:24.52px] [right:83.79px] w-[136.97px] h-[167.31px] object-contain z-40',
+        className:
+          'absolute [bottom:24.52px] [right:83.79px] w-[136.97px] h-[167.31px] object-contain z-40',
       },
     ],
-  }
-  
+  },
 };

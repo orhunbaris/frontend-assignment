@@ -21,7 +21,12 @@
     "noEmit": true,
     "jsx": "react-jsx",
   },
-  "include": ["**/*.ts", "**/*.tsx", "tailwind.config.ts", "postcss.config.cjs"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "tailwind.config.ts",
+    "postcss.config.cjs",
+  ],
   "references": [
     {
       "path": "./tsconfig.vite.json",

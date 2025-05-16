@@ -39,8 +39,7 @@ export const slides = [
 
     label: 'Export & Share',
     title: 'All-Round Conversation',
-    subtitle:
-      'Export your scans as PDF,JPG,ZIP,TXT and Word.',
+    subtitle: 'Export your scans as PDF,JPG,ZIP,TXT and Word.',
   },
 ];
 

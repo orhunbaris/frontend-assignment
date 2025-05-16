@@ -1,42 +1,45 @@
-@import 'tailwindcss';
+@import url('tailwindcss');
+
 body {
   display: block;
-  @apply font-sans;
-  background-color: black;
   width: 100%;
   height: 100%;
+  background-color: black;
+
+  @apply font-sans;
 }
 
 @font-face {
   font-family: 'SF Pro Display';
-  src: url('/src/assets/fonts/sf-pro-display/') format('opentype');
   font-weight: 400;
+  src: url('/src/assets/fonts/sf-pro-display/') format('opentype');
 }
 
 @font-face {
   font-family: 'SF Pro Display';
-  src: url('/src/assets/fonts/sf-pro-display/') format('opentype');
   font-weight: 500;
+  src: url('/src/assets/fonts/sf-pro-display/') format('opentype');
 }
 
 @font-face {
   font-family: 'SF Pro Display';
-  src: url('/src/assets/fonts/sf-pro-display/') format('opentype');
   font-weight: 700;
+  src: url('/src/assets/fonts/sf-pro-display/') format('opentype');
 }
 
 @font-face {
   font-family: 'SF Pro Display';
-  src: url('/src/assets/fonts/sf-pro-display/') format('opentype');
   font-weight: 800;
   font-style: italic;
+  src: url('/src/assets/fonts/sf-pro-display/') format('opentype');
 }
 
-@media (max-width: 812px) {
+@media (width <= 812px) {
   .max-812\\:flex-col {
     flex-direction: column !important;
   }
 }
+
 @keyframes drawCircle {
   to {
     stroke-dashoffset: 0;
@@ -48,5 +51,3 @@ body {
     transform: scale(1);
   }
 }
-
-
